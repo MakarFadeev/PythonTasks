@@ -21,12 +21,13 @@ print('Начали:')
 random_number = random.randint(0, 7)
 print(messages[random_number])
 start_time = datetime.datetime.now()
+time.sleep(1)
 answer = input()
 end_time = datetime.datetime.now()
 delta = end_time - start_time
 delta = delta.seconds + delta.microseconds / 1000000
-speed = int(len(messages[random_number])) / int(delta)
-print('Отлично! вы вывели целых ', len(messages[random_number]), ' символов за ', delta, ' секунд!')
+speed = int(len(answer)) / int(delta)
+print('Отлично! вы вывели целых ', len(answer), ' символов за ', delta, ' секунд!')
 print('Также я определил, что ваша скорость печатания - ', speed, ' символов в секунду!')
 if (answer == messages[random_number]):
     print('Также у вас получилось написать текст без ошибок! Поздравляю!')

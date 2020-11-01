@@ -1,0 +1,1 @@
+n=int(input("Главное число: "));print(min(list(map(int,input().split())),key=lambda x:(abs(x-n),x)))
