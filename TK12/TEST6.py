@@ -1,0 +1,40 @@
+from tkinter import *
+
+#Настройки окна
+window = Tk()
+window.geometry('400x500')
+window.title('Позиционирование виджетов')
+# window.resizable(True, True)
+
+#Виджеты
+frame1 = LabelFrame(text = 'Pack', width =  300, height = 200)
+frame2 = LabelFrame(text = 'Grid', width =  300, height = 200)
+frame3 = LabelFrame(text = 'Place', width =  300, height = 200)
+button10 = Button(frame1, text = 'Кнопочка 1', bg = 'black', fg = 'white', width = 10)
+button11 = Button(frame1, text = 'Кнопочка 2', bg = 'black', fg = 'white', width = 10)
+button12 = Button(frame1, text = 'Кнопочка 3', bg = 'black', fg = 'white', width = 10)
+button13 = Button(frame2, text = 'Кнопочка 4', bg = 'black', fg = 'white', width = 23)
+button14 = Button(frame2, text = 'Кнопочка 5', bg = 'black', fg = 'white', width = 10)
+button15 = Button(frame2, text = 'Кнопочка 6', bg = 'black', fg = 'white', width = 10, height = 5)
+button16 = Button(frame2, text = 'Кнопочка 7', bg = 'black', fg = 'white', width = 10)
+#button17 = Button(frame2, text = 'Кнопочка 8', bg = 'black', fg = 'white', width = 10)
+button18 = Button(frame2, text = 'Кнопочка 9', bg = 'black', fg = 'white', width = 10)
+button19 = Button(frame3, text = 'Кнопочка 10', bg = 'black', fg = 'white', width = 10)
+button20 = Button(frame3, text = 'Кнопочка 11', bg = 'black', fg = 'white', width = 10)
+frame1.place(x = 50, y = 350)
+frame2.place(x = 80, y = 120)
+frame3.place(x = 300, y = 20)
+button10.pack(padx = 10, pady = 10)
+button11.pack(padx = 10, pady = 10)
+button12.pack(padx = 10, pady = 10)
+button13.grid(column = 0, row = 0, columnspan = 2, padx = 2, pady = 2)
+button14.grid(column = 0, row = 1, padx = 2, pady = 2)
+button15.grid(column = 1, row = 1, rowspan = 3, padx = 2, pady = 2)
+button16.grid(column = 0, row = 2, padx = 2, pady = 2)
+#button17.grid(column = 1, row = 2, padx = 2, pady = 2)
+button18.grid(column = 0, row = 3, padx = 2, pady = 2)
+button19.place(x = 0, y = 0)
+button20.place(x = 150, y = 50)
+
+#Конец программы
+window.mainloop()
